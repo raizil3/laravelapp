@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+hr.hr-1 {
+  border-radius: 20px;
+  height: 6px;
+  width: 50%;
+  background-image: linear-gradient(to right, #fad014, #0898ff, #4ceb4c);
+  background-size: 400% 100%;
+  animation: move-colors 10s linear infinite;
+  }
+
+  @keyframes move-colors {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 400% 0%;
+    }
+  }
+
+.btn-grad {
+  background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%) !important;
+  padding: 10px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  border-color: none;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.authentication-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+.authentication-wrapper .authentication-inner {
+  width: 100%;
+}
+.authentication-wrapper.authentication-basic {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.authentication-wrapper.authentication-cover {
+  align-items: flex-start;
+}
+.authentication-wrapper.authentication-cover .authentication-inner {
+  height: 100vh;
+}
+.authentication-wrapper.authentication-basic .authentication-inner {
+  max-width: 400px;
+  position: relative;
+}
+.authentication-wrapper.authentication-basic .authentication-inner:before {
+  width: 148px;
+  height: 148px;
+  content: " ";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  color: yellow;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner:after {
+  width: 243px;
+  height: 240px;
+  content: " ";
+  position: absolute;
+  bottom: -68px;
+  left: -46px;
+}
+.authentication-wrapper.authentication-basic .authentication-inner .card {
+  z-index: 1;
+}
+.authentication-wrapper.authentication-basic .authentication-inner .card .app-brand {
+  margin-bottom: 2.5rem;
+}
+.authentication-wrapper .auth-input-wrapper .auth-input {
+  max-width: 50px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 150%;
+}
+
+@media (max-width: 575.98px) {
+  .authentication-wrapper .auth-input-wrapper .auth-input {
+    font-size: 1.125rem;
+  }
+}
+.light-style .authentication-wrapper .authentication-bg {
+  background-color: #fff;
+}
